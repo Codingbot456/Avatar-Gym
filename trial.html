@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Answers with Transition</title>
+<style>
+    .qq {
+        width: 80%;
+        margin: auto;
+    }
+    .questions-answer {
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    .ques {
+        margin-bottom: 10px;
+    }
+    .more {
+        cursor: pointer;
+        font-size: 20px;
+        text-align: center;
+    }
+    .answer {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.7s ease;
+    }
+    .answer.expanded {
+        height: auto;
+    }
+</style>
+</head>
+<body>
+
+<div class="qq">
+    <div class="questions-answer">
+        <div class="ques">
+            <p1>What's the best workout routine for beginners at the gym?</p1>
+            <p2>Start with a well-rounded program that includes strength training and cardiovascular exercises. Begin with compound movements and gradually increase intensity over time.</p2>
+        </div>
+        <div class="more">+</div>
+        <div class="answer">
+            <p2>Start with a well-rounded program that includes strength training and cardiovascular exercises. Begin with compound movements and gradually increase intensity over time.</p2>
+        </div>
+    </div>
+
+    <!-- Add other question-answer pairs here -->
+
+</div>
+
+<script>
+    const moreButtons = document.querySelectorAll('.more');
+    moreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            answer.classList.toggle('expanded');
+        });
+    });
+</script>
+
+</body>
+</html>

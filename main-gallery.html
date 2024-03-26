@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Video Grid</title>
+    <link rel="stylesheet" href="gallery.css">
+    <style>
+        .con {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .con video {
+            width: 100%;
+            height: auto;
+        }
+        .navbar {
+    color:var(--mian);
+    padding: 20px;
+    display: flex;
+    justify-content:center;
+    gap: 40%;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+
+}
+
+.nav-links a {
+  color:white;
+  font-weight: bolder;
+  text-decoration: none;
+  font-size: 22px;
+  
+}
+
+.nav-links a:hover{
+  color: var(--hoved-color);
+  letter-spacing: .5px;
+  transition: .3s linear;
+  scale: 1.04;
+}
+
+/* Burger Menu */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+   color: white;
+   width: 20px;
+   aspect-ratio: 1;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    width:100%;
+    overflow: hidden;
+}
+
+
+.hero-content {
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    padding: 10px;
+}
+.hero-content::after{
+    content: '.';
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-size: 2em;
+    display: block;
+    position: absolute;
+    left: 83%;
+    top: 40%;
+    width: 30px;
+   height: 40px;
+    color: white;
+    border-radius: 40px 40px 20px 20px;
+    transform: translateY(20px);
+    transition: .5s linear infinite;
+}
+.hero-content h1{
+    font-size: 5em;
+      color: white;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: .5px;
+      letter-spacing:.5px;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+     ;
+}
+.hero-content h2{
+    font-size: 4em;
+    width: 100%;
+    color: var(--brand-color);
+    -webkit-text-stroke-width: .5px;
+}
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+   color: white;
+   width: 20px;
+   aspect-ratio: 1;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 3px;
+}
+
+
+        @media screen and (max-width: 768px) {
+            .con {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            .burger {
+        display: flex;
+        background-color:var(--sub-background);
+        color: var(--background);
+        width: 40px;
+        height: 40px;
+        place-content: center;
+        align-items: center;
+        font-weight: bolder;
+        position: relative;
+        z-index: 1000;
+        top: 0;
+    }
+    .burger:hover{
+      background-color: var(--background);
+      color: var(--mian);
+      transition: .3s linear;
+    }
+        }
+        
+
+        @media screen and (max-width: 576px) {
+            .con {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body style="background-color:#111111 ;">
+
+    <section class="hero">
+        <nav class="navbar">
+           <img src="images/avatar.jpg" alt="" style="mix-blend-mode: color-dodge; width: 100px; border-radius: 50%;">
+            <div class="container">
+               
+                
+                <ul class="nav-links">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="main-gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <i class="fa-solid fa-bars"></i>
+                   
+                </div>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <h1>Our Experience</h1>
+           <h2>STRONGER TOMMOROW</h2>
+        </div>
+    </section>
+    <div class="con">
+        <video controls>
+            <source src="images/about.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="images/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="images/contact.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="images/VID_20230823_192422.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="images/VID_20230823_192422.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="images/VID_20230914_155737.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="images/VID_20230914_163813.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="images/VID_20230921_195623.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="images/VID_20240103_191933.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="images/VID_20240318_204336.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="images/VID_20240319_174358.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video controls>
+            <source src="images/VID_20240319_213809.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>
