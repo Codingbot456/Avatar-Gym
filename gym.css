@@ -56,7 +56,6 @@ body {
 /* Navbar Styling */
 .navbar {
     color:var(--mian);
-    background-color:red;
     padding: 20px;
     display: flex;
     justify-content:center;
