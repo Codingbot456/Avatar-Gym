@@ -86,30 +86,6 @@ ScrollReveal().reveal(".main-pack", {
     interval: 200
   });
   
-  ScrollReveal().reveal(" .footer1", {
-    duration: 1000,
-    origin: "bottom",
-    distance: "200px",
-    easing: "ease-in-out",
-    delay: 200
-  });
-  
-  ScrollReveal().reveal(" .main-footer1", {
-    duration: 1000,
-    origin: "left",
-    distance: "200px",
-    easing: "ease-in-out",
-    delay: 200
-  });
-  
-  ScrollReveal().reveal(" .main-footer2", {
-    duration: 1000,
-    origin: "right",
-    distance: "200px",
-    easing: "ease-in-out",
-    delay: 200
-  });
-
   ScrollReveal().reveal(" .container2 >div", {
     duration: 1000,
     origin: "right",
